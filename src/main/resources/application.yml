@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: local
+
+server:
+  port: 8080
+
+application:
+  mode: dev
+  phase: ${spring.profiles.active}
+  port: ${server.port}
+  secret:
+    mysql: mysql_vault
+    redis: redis_vault
